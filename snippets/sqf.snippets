@@ -1,0 +1,46 @@
+snippet wow
+	${1:Text}`!p snip.rv = (75-2*len(t[1]))*' '+t[1].upper()`
+
+snippet ctrlsetpos "ctrlSetPosition command with x, y, w and h on new lines"
+	_ctrl${1:Name} ctrlSetPosition [
+		${2:x},
+		${3:y},
+		${4:w},
+		${5:h},
+	];
+	_ctrl$1 ctrlCommit 0;
+
+snippet headervgm "Function header for Tour of Duty"
+	/*
+		File: `expand('%')`
+		Author: Savage Game Design
+		Date: `strftime("%Y-%M-%d")`
+		Last Update: `strftime("%Y-%M-%d")`
+		Public: No
+
+		Description:
+				__DESCRIPTION__
+
+		Parameter(s):
+				_var - __DESC__ [TYPE]
+
+		Returns:
+				__DESC__ [TYPE]
+
+		Example(s):
+				[] call vgm_c_fnc_;
+	*/
+
+snippet uiscript "Insert basic ui script used by BIS_fnc_initDisplay"
+	params ["_mode", "_params"];
+	switch _mode do {
+		case "onLoad":{
+			_params params ["_display"];
+		};
+		case "onUnload":{
+			_params params ["_display", "_exitCode"];
+		};
+	};
+
+snippet proctext "Procedural texture (green)"
+	#(rgb,1,1,1)color(0,1,0,1)

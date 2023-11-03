@@ -1,0 +1,28 @@
+snippet Attributes "class Attributes (CT_STRUCTURED_TEXT)"
+	class Attributes
+	{
+		font = "RobotoCondensed";
+		color = "#ffffff";
+		colorLink = "#D09B43";
+		align = "left";
+		shadow = 1;
+	};
+
+snippet colordebug "Red transparent color to debug the position of a control"
+	colorBackground[] = {1,0,0,0.2};
+
+snippet proctext "Procedural texture"
+	"#(format,width,height,mipmapsAmount)color(r,g,b,a)"
+
+snippet uicfg "Basic UI config"
+	class DISPLAYNAME
+	{
+			idd = IDD;
+			onLoad = ONLOAD;
+			class ControlsBackground
+			{
+			};
+			class Controls
+			{
+			};
+	};
