@@ -1,1 +1,1 @@
-vim.opt.makeprg = "pdflatex -interaction=nonstopmode %"
+-- vim.opt.makeprg = "pdflatex -interaction=nonstopmode %"
