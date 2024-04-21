@@ -1,0 +1,30 @@
+snippet doc "Basic document"
+	\documentclass{article}
+
+	\usepackage{amssymb}
+	\usepackage{amsmath}
+	\usepackage{graphicx}
+	\usepackage[utf8]{inputenc}
+
+	\author{Peter Gausmann}
+	\title{$1}
+
+	\begin{document}
+	\maketitle
+	$0
+	\end{document}
+
+snippet frac "Fraction"
+	\frac{$1}{$2}
+
+snippet cmd1 "Command with one parameter"
+	\\$1{$2}$0
+
+snippet cmd2 "Command with two parameters"
+	\\$1{$2}{$3}$0
+
+snippet ul "Unordered list"
+	\begin{itemize}
+		\item $1
+	\end{itemize}
+	
