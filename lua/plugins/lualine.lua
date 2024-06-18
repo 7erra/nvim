@@ -16,8 +16,13 @@ return {
         disabled_filetypes = { statusline = { "dashboard", "alpha", "starter" } },
       },
       sections = {
-        lualine_a = {},
-        lualine_b = {},
+        -- Left side
+        lualine_a = {
+          "mode",
+        },
+        lualine_b = {
+          "branch",
+        },
         lualine_c = {
           { LazyVim.lualine.pretty_path() },
           {
@@ -39,6 +44,7 @@ return {
             end,
           },
         },
+        -- Right side
         lualine_x = {
           {
             "diagnostics",
