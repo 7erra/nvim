@@ -19,6 +19,24 @@ return {
         lualine_a = {},
         lualine_b = {},
         lualine_c = {
+          {
+            "diff",
+            symbols = {
+              added = icons.git.added,
+              modified = icons.git.modified,
+              removed = icons.git.removed,
+            },
+            source = function()
+              local gitsigns = vim.b.gitsigns_status_dict
+              if gitsigns then
+                return {
+                  added = gitsigns.added,
+                  modified = gitsigns.changed,
+                  removed = gitsigns.removed,
+                }
+              end
+            end,
+          },
           { LazyVim.lualine.pretty_path() },
         },
         lualine_x = {
@@ -71,24 +89,8 @@ return {
               return LazyVim.ui.fg("Special")
             end,
           },
-          {
-            "diff",
-            symbols = {
-              added = icons.git.added,
-              modified = icons.git.modified,
-              removed = icons.git.removed,
-            },
-            source = function()
-              local gitsigns = vim.b.gitsigns_status_dict
-              if gitsigns then
-                return {
-                  added = gitsigns.added,
-                  modified = gitsigns.changed,
-                  removed = gitsigns.removed,
-                }
-              end
-            end,
-          },
+        },
+        lualine_y = {
           {
             -- https://github.com/nvim-lualine/lualine.nvim/discussions/1153
             function()
@@ -123,6 +125,8 @@ return {
               return ""
             end,
           },
+        },
+        lualine_z = {
           {
             -- LSP Info
             function()
@@ -138,8 +142,6 @@ return {
             end,
           },
         },
-        lualine_y = {},
-        lualine_z = {},
       },
       extensions = {},
     }
