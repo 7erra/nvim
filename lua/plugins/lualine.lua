@@ -47,15 +47,6 @@ return {
         -- Right side
         lualine_x = {
           {
-            "diagnostics",
-            symbols = {
-              error = icons.diagnostics.Error,
-              warn = icons.diagnostics.Warn,
-              info = icons.diagnostics.Info,
-              hint = icons.diagnostics.Hint,
-            },
-          },
-          {
             -- Recording @
             require("noice").api.status.mode.get,
             cond = require("noice").api.status.mode.has,
@@ -84,6 +75,15 @@ return {
             color = function()
               return LazyVim.ui.fg("Special")
             end,
+          },
+          {
+            "diagnostics",
+            symbols = {
+              error = icons.diagnostics.Error,
+              warn = icons.diagnostics.Warn,
+              info = icons.diagnostics.Info,
+              hint = icons.diagnostics.Hint,
+            },
           },
         },
         lualine_y = {
@@ -139,7 +139,7 @@ return {
           },
         },
       },
-      extensions = {},
+      extensions = { "lazy" },
     }
 
     -- do not add trouble symbols if aerial is enabled
