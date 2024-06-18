@@ -2,9 +2,9 @@ return {
   {
     "folke/noice.nvim",
     opts = {
-      messages = {
-        enabled = false,
-      },
+      -- messages = {
+      --   enabled = false,
+      -- },
     },
   },
 }
