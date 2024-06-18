@@ -19,6 +19,7 @@ return {
         lualine_a = {},
         lualine_b = {},
         lualine_c = {
+          { LazyVim.lualine.pretty_path() },
           {
             "diff",
             symbols = {
@@ -37,7 +38,6 @@ return {
               end
             end,
           },
-          { LazyVim.lualine.pretty_path() },
         },
         lualine_x = {
           {
@@ -158,7 +158,7 @@ return {
           format = "{kind_icon}{symbol.name:Normal}",
           hl_group = "lualine_c_normal",
         })
-      table.insert(opts.sections.lualine_c, {
+      table.insert(opts.sections.lualine_c, 2, {
         symbols and symbols.get,
         cond = symbols and symbols.has,
       })
