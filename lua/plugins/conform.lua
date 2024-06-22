@@ -17,6 +17,8 @@ return {
         sh = { "shfmt" },
         htmldjango = { "djlint" },
         python = { "autopep8" },
+        typescriptreact = { "prettier" },
+        typescript = { "prettier" },
       },
       -- The options you set here will be merged with the builtin formatters.
       -- You can also define any custom formatters here.
