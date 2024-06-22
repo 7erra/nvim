@@ -1,0 +1,16 @@
+{
+  "test": {
+    "prefix": [
+      "jsdocfunction"
+    ],
+    "body": [
+      "/**",
+      " * ${1:[TODO:description]}",
+      " *",
+      " * @param {${2:[TODO:param type}} ${3:[TODO:param name]} - ${4:[TODO:description]}",
+      " * @returns {${5:[TODO:return type]}} ${6:[TODO:description]}",
+      " */",
+      "$0"
+    ]
+  }
+}
