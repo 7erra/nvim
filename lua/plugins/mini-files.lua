@@ -1,6 +1,22 @@
 return {
   "echasnovski/mini.files",
   opts = {
+    content = {
+      filter = function(fs_entry)
+        -- List of LaTeX temporary file extensions to exclude
+        local exclude_patterns =
+          { ".aux", ".log", ".toc", ".out", ".fls", ".fdb_latexmk", ".loc", ".soc", ".bbl", ".bcf", ".blg", ".run.xml" }
+
+        -- Loop through the patterns and exclude files that match
+        for _, pattern in ipairs(exclude_patterns) do
+          if vim.endswith(fs_entry.name, pattern) then
+            return false -- Do not show the file
+          end
+        end
+
+        return true -- Show other files
+      end,
+    },
     opts = {
       windows = {
         preview = true,
