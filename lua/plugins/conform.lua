@@ -16,7 +16,6 @@ return {
         fish = { "fish_indent" },
         sh = { "shfmt" },
         htmldjango = { "djlint" },
-        python = { "autopep8" },
         typescriptreact = { "prettier" },
         typescript = { "prettier" },
       },
