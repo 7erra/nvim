@@ -5,7 +5,6 @@ if vim.fn.has("linux") == 1 then
   print("linux")
   vim.g.python3_host_prog = "/usr/bin/python3"
 elseif vim.fn.has("win32") == 1 then
-  vim.g.python3_host_prog = [[~\AppData\Local\Programs\Python\Python310\python.exe]]
   vim.o.shell = "pwsh"
   vim.o.shellpipe = ">%s 2 >&1"
   vim.o.shellcmdflag =
