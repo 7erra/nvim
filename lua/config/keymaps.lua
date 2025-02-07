@@ -19,3 +19,4 @@ map({ "n", "v" }, "<leader>rl", "<Plug>(RestNvimLast)", { desc = "Rerun the last
 -- wk.register({ ["<leader>r"] = { name = "+REST" } })
 wk.add({ "<leader>r", group = "REST" }, { "<leader>p", group = "+Copilot" })
 map("n", "<leader>m", vim.cmd.make, { desc = ":make" })
+map("t", "<Esc><Esc>", "<C-\\><C-n>")
