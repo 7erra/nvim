@@ -5,6 +5,7 @@ local colors = {
   magenta = "#FFCAFF",
   red = "#FFC0B9",
   yellow = "#FCE094",
+  bg = "#14161b",
   fg = "#C4C6CD",
   bg_b = "#4f5258",
   bg_c = "#2C2E33",
