@@ -7,8 +7,8 @@ local colors = {
   yellow = "#FCE094",
   fg = "#C4C6CD",
   bg = "#14161B",
-  bg_b = "#2C2E33",
-  bg_c = "#1E2026",
+  bg_b = "#4f5258",
+  bg_c = "#2C2E33",
 }
 
 local theme = {
