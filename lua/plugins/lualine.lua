@@ -11,7 +11,7 @@ return {
 
     local opts = {
       options = {
-        theme = "auto",
+        theme = "ayu",
         globalstatus = vim.o.laststatus == 3,
         disabled_filetypes = { statusline = { "dashboard", "alpha", "starter" } },
       },
