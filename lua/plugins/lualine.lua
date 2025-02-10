@@ -1,3 +1,46 @@
+local colors = {
+  blue = "#A6DBFF",
+  cyan = "#8cf8f7",
+  green = "#b4f6c0",
+  magenta = "#FFCAFF",
+  red = "#FFC0B9",
+  yellow = "#FCE094",
+  fg = "#C4C6CD",
+  bg = "#14161B",
+  bg_b = "#2C2E33",
+  bg_c = "#1E2026",
+}
+
+local theme = {
+  normal = {
+    a = { fg = colors.bg, bg = colors.blue, gui = "bold" },
+    b = { fg = colors.fg, bg = colors.bg_b },
+    c = { fg = colors.fg, bg = colors.bg_c },
+  },
+
+  insert = {
+    a = { fg = colors.bg, bg = colors.green, gui = "bold" },
+  },
+
+  visual = {
+    a = { fg = colors.bg, bg = colors.magenta, gui = "bold" },
+  },
+
+  replace = {
+    a = { fg = colors.bg, bg = colors.red, gui = "bold" },
+  },
+
+  command = {
+    a = { fg = colors.bg, bg = colors.yellow, gui = "bold" },
+  },
+
+  inactive = {
+    a = { fg = colors.fg, bg = colors.bg_c },
+    b = { fg = colors.fg, bg = colors.bg_c },
+    c = { fg = colors.fg, bg = colors.bg_b },
+  },
+}
+
 return {
   "nvim-lualine/lualine.nvim",
   opts = function()
@@ -11,7 +54,7 @@ return {
 
     local opts = {
       options = {
-        theme = "ayu",
+        theme = theme,
         globalstatus = vim.o.laststatus == 3,
         disabled_filetypes = { statusline = { "dashboard", "alpha", "starter" } },
       },
