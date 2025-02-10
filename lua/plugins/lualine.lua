@@ -6,7 +6,6 @@ local colors = {
   red = "#FFC0B9",
   yellow = "#FCE094",
   fg = "#C4C6CD",
-  bg = "#14161B",
   bg_b = "#4f5258",
   bg_c = "#2C2E33",
 }
@@ -183,24 +182,6 @@ return {
       },
       extensions = { "lazy" },
     }
-
-    -- do not add trouble symbols if aerial is enabled
-    -- if vim.g.trouble_lualine then
-    --   local trouble = require("trouble")
-    --   local symbols = trouble.statusline
-    --     and trouble.statusline({
-    --       mode = "symbols",
-    --       groups = {},
-    --       title = false,
-    --       filter = { range = true },
-    --       format = "{kind_icon}{symbol.name:Normal}",
-    --       hl_group = "lualine_b_normal",
-    --     })
-    --   table.insert(opts.sections.lualine_b, 2, {
-    --     symbols and symbols.get,
-    --     cond = symbols and symbols.has,
-    --   })
-    -- end
 
     return opts
   end,
