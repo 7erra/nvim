@@ -3,6 +3,8 @@ return {
   opts = function()
     -- PERF: we don't need this lualine require madness 🤷
     local lualine_require = require("lualine_require")
+    local colors = require("config.colors")
+    colors.normal.c.bg = "#000"
     lualine_require.require = require
 
     local icons = LazyVim.config.icons
@@ -10,9 +12,13 @@ return {
     vim.o.laststatus = vim.g.lualine_laststatus
 
     local opts = {
+
       options = {
         globalstatus = vim.o.laststatus == 3,
-        disabled_filetypes = { statusline = { "dashboard", "alpha", "starter" } },
+        disabled_filetypes = {
+          statusline = { "dashboard", "alpha", "starter" },
+        },
+        theme = colors,
       },
       sections = {
         -- Left side
