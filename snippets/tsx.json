@@ -1,0 +1,12 @@
+{
+  "Component": {
+    "prefix": "react-component",
+    "body": [
+      "interface $1Props {",
+      "}",
+      "export default function $1({ }: $1Props) {",
+      "\treturn <div>Hello, World! from $1</div>;",
+      "}"
+    ]
+  }
+}
