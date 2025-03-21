@@ -5,7 +5,6 @@ local wk = require("which-key")
 
 local map = vim.keymap.set
 
-map("n", "<leader>fa", "gg0vG$", { desc = "Mark entire file", remap = true })
 map("v", "<C-r>", '"hy:%s/<C-r>h//gc<left><left><left>', { desc = "Replace current word in file", remap = true })
 map("n", "<leader><Tab>p", function()
   vim.cmd("tabprevious")
